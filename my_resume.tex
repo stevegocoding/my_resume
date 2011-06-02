@@ -1,0 +1,175 @@
+\documentclass[10pt]{article}
+
+\usepackage{charter}
+\usepackage{fullpage}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{currvita}
+\usepackage[top=0.9in, bottom=0.8in, left=1.25in, right=1.25in]{geometry}
+
+\newenvironment{mylist}{%
+    \begin{list}{}
+        \setlength{\itemsep}{0.25em}%
+        \setlength{\parsep}{0em}%
+        \setlength{\topsep}{\itemsep}%
+        \setlength{\parskip}{0em}%
+        \setlength{\labelwidth}{0.1em}
+    }
+{ \end{list} }
+
+\newenvironment{mydescription}{%
+    \begin{description}
+        \setlength{\itemsep}{0.25em}%
+        \setlength{\parsep}{0em}%
+        \setlength{\topsep}{\itemsep}%
+        \setlength{\parskip}{0em}%
+        \setlength{\labelwidth}{0.1em}
+        \setlength{\labelsep}{0em} 
+    }%
+{\end{description}}
+
+\newenvironment{myitemize}{\begin{itemize} % 
+        \setlength{\itemsep}{0.25em} 
+        \setlength{\topsep}{\itemsep} 
+        \setlength{\labelsep}{1em}
+        \setlength{\parskip}{0em}
+        \setlength{\partopsep}{0em}
+}%
+{ \end{itemize} }
+       
+\pagestyle{empty}
+
+\begin{document} 
+\date{}
+\newlength{\oldcvlabelwidth}
+\newlength{\oldcvlabelsep}
+
+%\small
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This section is the head of the resume
+\begin{cv} {{\large Guangfu Shi}\\
+    { \normalsize \mdseries 512-1625 Maisonneuve West, Montreal, Quebec \\ 
+    Phone: {\mdseries (514)583-0603}  
+    \hfill E-mail: {\mdseries \href{mailto:stevegocoding@gmail.com} {stevegocoding@gmail.com}}
+    }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\oldcvlabelsep}{\cvlabelsep}
+\setlength{\cvlabelwidth}{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This section is the RESUME PROFILE
+%\input{resume_profile_test}
+
+\begin{cvlist}{Profile} 
+\item
+    \begin{myitemize}
+        %% Degree, objective
+        \item Graduate in Computer Science, interested in Computer Graphics and game development.  
+            
+        
+        \item Development experience on a variety of platforms including XBox360 and iPhone.
+           
+        % Math and algorithm 
+        \item Solid mathematics (trigonometry, calculus, and linear algebra) and algorithms skills. 
+            
+        % Communication skills, team-working ability
+        \item Excellent communication skill and teamwork ability. 
+
+    \end{myitemize}
+\end{cvlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\cvlabelwidth}{1em}
+%\setlength{\oldcvlabelsep}{\cvlabelsep}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This section is all about EDUCATION
+\begin{cvlist}{Education}
+    
+    \item   \textbf{M.S., Computer Science} \hfill 2011 \\ 
+            \emph{Concordia University, Montreal, Canada}
+    \item   \textbf{BEng, Software Engineering} \hfill 2007 \\
+            \emph{Beijing Jiaotong University, Beijing, China. GPA: 4.0/4.0}
+\end{cvlist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{cvlist}{Technical Skills}
+\item
+    \begin{mydescription} 
+        \item Operating System/Platform: \hspace{0.1em} 
+            MS Windows, Linux, MacOS X, iOS, XBox 360.
+        \item Programming Language: \hspace{0.1em} 
+            C/C++, Objective-C, Assembly, C\#, Java, OpenCL, GLSL, HLSL, Cg.
+        \item Frameworks/API: \hspace{0.1em} 
+            OpenGL/GL ES, DirectX, OpenCL, SDL, XNA, Cocoa, Ogre, Unreal Engine.  
+        \item Tools: \hspace{0.1em} 
+            Visual Studio, XCode, VIM, 3ds Max, Blender, Subversion.
+    \end{mydescription} 
+\end{cvlist} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setlength{\cvlabelwidth}{0em}
+%\setlength{\cvlabelsep}{\labelsep}
+%\setlength{\oldcvlabelsep}{\cvlabelsep}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This section is all about EXPERIENCE 
+\begin{cvlist}{Technical Assistant Experience}
+\item
+    \begin{mydescription}
+        %% Projects and demos
+        \item[Graduate Research Project: GPU KD-Tree Constructor for Ray Tracing] \hfill \\
+            Focus on the approaches of accelerating ray-tracing rendering mainly utilizing the kd-tree structure and GPU implementation. Using \LaTeX\ for report and thesis.    
+
+        \item[3D First Person Shooter Game Demo] \hfill \\ 
+            Developed a FPS game demo using C++ and Direct3D 9, implemented outdoor terrain rendering with level of detail, key frame animation (MD3 format) and particle system.
+            
+        \item[2D Super Mario Game] \hfill \\
+            Implemented a 2D sprite-based super mario game using C++ and DirectDraw, a level editor has been developed as well using C\# and XML file for the data storage.
+       
+        \item[3D Racing Game Demo] \hfill \\ 
+            Created An OpenGL racing game demo, with texture mapping, GLSL, particle system and billboards.
+            
+        \item[A J2ME game] \hfill \\
+            Designed and implemented a ``3 in 1'' games collection using Java and J2ME.  
+            
+        \item[Model Exporter for 3ds Max] \hfill \\
+            Implemented customized 3D model format exporter for 3ds Max using MAXScript. 
+    \end{mydescription}
+\end{cvlist}
+
+\begin{cvlist}{Internship Experience}
+\item 
+    \begin{mydescription}
+        \item[Offshore Development Center, VanceInfo, Beijing, China] \hfill Winter,2007 \\ 
+            Responsible for writing testing scripts for Microsoft products. 
+    \end{mydescription}
+\end{cvlist}
+
+\begin{cvlist}{Teaching Experience}
+\item
+    \begin{mydescription}
+        \item[Lab instructor, \emph{Game Design and Implementation}, Concordia University] \hfill Fall 2009\\
+            Assist students to implement their game designing on Xbox 360 console. 
+
+        \item[Teaching assistant, \emph{Advanced Computer Graphics}, Concordia University] \hfill Winter 2009 \\
+            Assist students to finish the assignments and project using OpenGL. 
+    \end{mydescription}
+\end{cvlist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setlength{\cvlabelsep}{\labelsep}
+%\setlength{\oldcvlabelsep}{\cvlabelsep}
+\begin{center}
+    \textbf{Reference Available Upon Request}
+\end{center}
+
+\end{cv} 
+\end{document}
