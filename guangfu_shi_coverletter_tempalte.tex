@@ -1,0 +1,119 @@
+% Cover letter using letter.cls
+% default is 10 pt
+\documentclass{letter} 
+
+%\usepackage{helvetica}             % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}                % uses new century schoolbook postscript font 
+\usepackage{hyperref}
+
+% the following commands control the margins:
+\topmargin=-1in                     % Make letterhead start about 1 inch from top of page
+\textheight=8.5in                   % text height can be bigger for a longer letter
+\oddsidemargin=0pt                  % leftmargin is 1 inch
+\textwidth=6.5in                    % textwidth of 6.5in leaves 1 inch for right margin
+
+\hypersetup{ 
+    colorlinks=false,
+    urlcolor=blue,
+    pdfborder={0,0,0}
+}
+
+
+\newcommand{\placeholder}               {[?]}
+\newcommand{\phcontacttitle}            {\placeholder}
+\newcommand{\phcontactname}             {\placeholder}
+\newcommand{\phcontatctposition}        {\placeholder}
+\newcommand{\phcompanyname}             {\placeholder}
+\newcommand{\phcompanyaddr}             {\placeholder}
+\newcommand{\phcompanycity}             {\placeholder}
+\newcommand{\phcompanyprov}             {\placeholder}
+\newcommand{\phcompanynation}           {\placeholder}
+\newcommand{\phcompanyzip}              {\placeholder}
+\newcommand{\phjobpostedtitle}          {\placeholder}
+\newcommand{\phjobposteddate}           {\placeholder}
+\newcommand{\phjobpostedplace}          {\placeholder}
+
+% Contact Person Information
+\newcommand{\clcontacttitle}        {\phcontacttitle}
+\newcommand{\clcontactname}         {\phcontactname}
+\newcommand{\clcontactposition}     {\phcontactposition}
+
+% Company Information
+\newcommand{\clcompanyname}         {\phcompanyname}
+\newcommand{\clcompanyaddr}         {\phcompanyaddr}
+\newcommand{\clcompanycity}         {\phcompanycity}
+\newcommand{\clcompanyprov}         {\phcompanyprov}
+\newcommand{\clcompanynation}       {\phcompanynation}
+\newcommand{\clcompanyzip}          {\phcompanyzip}
+
+% Job Information
+\newcommand{\cljobpostedtitle}      {\phjobpostedtitle}
+\newcommand{\cljobposteddate}       {\phjobposteddate}
+\newcommand{\cljobpostedplace}      {\phjobpostedplace}
+
+% Personal Information
+\newcommand{\clmyname}              {Guangfu Shi}
+\newcommand{\clmyaddr}              {29-2105 Rue Chomedey \\ Montreal, Quebec \\ Canada H3H 2A8}
+\newcommand{\clmyemail}             {\href{mailto:stevegocoding@gmail.com}{stevegocoding@gmail.com}}
+\newcommand{\clmyphone}             {(514) 583-0603}
+
+\newenvironment{myitemize}{\begin{itemize} % 
+        \setlength{\itemsep}{0.25em} 
+        \setlength{\topsep}{\itemsep} 
+        \setlength{\labelsep}{1em}
+        \setlength{\parskip}{0em}
+        \setlength{\partopsep}{0em}
+}%
+{ \end{itemize} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{document}
+\signature{Guangfu Shi}             % name for signature 
+\longindentation=0pt                % needed to get closing flush left
+\let\raggedleft\raggedright         % needed to get date flush left
+
+%\begin{letter}{
+%    \clcontacttile\ \clcontactname  \\
+%    \clcontactposition              \\
+%    \clcompanyname                  \\
+%    \clcompanyaddr                  \\
+%    \clcompanycity,\ \clcompanyprov \\
+%    \clcompanyzip} 
+
+\begin{letter}{\clcontactname \\ \clcompanyname \\ \clcompanyaddr \\ \clcompanycity,\ \clcompanyprov \\ \clcompanynation\ \clcompanyzip}
+
+\begin{center}
+    \large\bf\clmyname              \\ 
+    \clmyaddr                       \\
+    \clmyphone                      \\ 
+    \clmyemail                      
+\end{center}
+
+\vfill % forces letterhead to top of page
+
+\opening{Dear \clcontactname:}
+
+Your opening position of \cljobpostedtitle\ advertised on \cljobposteddate\ at \emph{\cljobpostedplace}\ really caught my eye. I am therefore submitting my resume for your review and would appreciate the opportunity to discuss it with you personally.
+
+I am currently finishing my graduate study focus on Computer Graphics at Concordia University and expect to graduate in Fall. My academic background has provided me with a firm grasp of 3D mathematics. I am able to program proficiently with C/C++ programming language and obtained solid programming skills and extensive experience with variety of engines, libraries and tools by working on different part of video games creation process, such as tools development, engine-level programming and game play scripting.
+
+By carefully reviewing the requirements of this position, I believe that I am well-qualified for this position and the following list highlights the qualifications:
+
+\begin{itemize}
+        \item Solid programming skills, mathematics knowledge and problem solving ability.
+        \item Good communication and teamwork skills.
+        \item Be self-motivated to learn.
+        \item Be passionate on programming and game development.
+\end{itemize}
+
+Please review my accomplishments as highlighted on the enclosed resume. I would look forward to meeting with you personally to further explore your specific requirements. Should you have any questions or concerns regarding my resume, please contact me at \clmyphone\ or \clmyemail.
+
+Thank you very much for your time and consideration. 
+
+\closing{Sincerely yours,}
+%\encl{}
+\end{letter}
+\end{document}
+
