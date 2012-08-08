@@ -8,5 +8,6 @@ build/
 *.aux
 *.log
 *.synctex
+*.synctex.gz
 *.out
 *.pdf
